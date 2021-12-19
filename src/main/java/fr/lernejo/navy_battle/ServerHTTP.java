@@ -3,6 +3,7 @@ package fr.lernejo.navy_battle;
 
 import com.sun.net.httpserver.HttpServer;
 import fr.lernejo.navy_battle.Handler.CallHandler;
+import fr.lernejo.navy_battle.Handler.FireHandler;
 import fr.lernejo.navy_battle.Handler.StartHandler;
 
 import java.io.IOException;
@@ -33,6 +34,7 @@ public class ServerHTTP
         httpServ.setExecutor(Executors.newFixedThreadPool(1));
         httpServ.createContext("/ping",new CallHandler());
         httpServ.createContext("/api/game/start",new StartHandler());
+        httpServ.createContext("/api/game/fire", new FireHandler());
         httpServ.start();
     }
 
