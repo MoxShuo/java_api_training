@@ -54,7 +54,7 @@ public class StartHandler implements HttpHandler{
         JSONObject objet = new JSONObject();
         objet.put("id", "xxx");
         objet.put("url", "http://localhost:"+port);
-        objet.put("message", "UwU");
+        objet.put("message", "Start game");
         return objet.toString();
     }
 }
