@@ -13,7 +13,7 @@ public class LauncherTest {
     }
     @Test
     void mainTest2(){
-        org.assertj.core.api.Assertions.assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> Launcher.main(new String[] {"9786","ok","ok"})).withMessage("il doit y avoir 1 ou 2 arguments");
+        org.assertj.core.api.Assertions.assertThatExceptionOfType(IndexOutOfBoundsException.class).isThrownBy(() -> Launcher.main(new String[] {"9786","ok","ok"})).withMessage("il doit y avoir 1 ou 2 arguments");
     }
     @Test
     void mainTest3(){
